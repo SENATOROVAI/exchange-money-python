@@ -5,7 +5,7 @@ import json
 API_KEY = "bce823840b2ba077be0b77fe90e64a22"
 url = "https://api.exchangeratesapi.io/v1/"
 
-BASE_CURRENCY = "EUR" #only for free tariff
+BASE_CURRENCY = "EUR"  # only for free tariff
 # OUTPUT_CURRENCY_LIST = "USD", "EUR"
 AMOUNT = 1
 
