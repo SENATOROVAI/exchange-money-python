@@ -1,3 +1,4 @@
 # exchange-money-python
 
-Useing free API from https://currate.ru/
+Using free API from https://currate.ru/
+Using free API from https://api.exchangeratesapi.io/v1/
