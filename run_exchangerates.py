@@ -20,9 +20,8 @@ AMOUNT = 1
 #     json.dump(req_json,outfile,ensure_ascii=False,indent=4)
 
 
-def exchange(val, amount):
+def exchange(cur, amount):
     with open("exchangerates_req.json", "r") as f:
         req_json = json.loads(f.read())
-        result = float(req_json["rates"][val])
-    return f"{amount} EUR = "+str(result) + f" {val}"
-
+        result = float(req_json["rates"][cur])
+    return f"{amount} EUR = "+str(result) + f" {cur}"

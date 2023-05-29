@@ -6,4 +6,3 @@ if __name__ == "__main__":
     amount = input("Input amount: ")
     # print(exchange(cur, amount))
     print(exchange(f"{cur}", f"{amount}"))
-    
