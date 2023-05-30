@@ -13,16 +13,21 @@ AMOUNT = "5"
 
 
 def get_pair_amount():
-    global AMOUNT, PAIR_CURRENCY 
-    PAIR_CURRENCY, AMOUNT = input("Input currency pair: "), input("Input amount: ")
- 
+    global AMOUNT, PAIR_CURRENCY
+    PAIR_CURRENCY, AMOUNT = input(
+        "Input currency pair: "), input("Input amount: ")
+
 
 def get_pair_course():
-    req = dict(json.loads(re.get(f'https://currate.ru/api/?get=rates&pairs={PAIR_CURRENCY}&key={API_KEY}').text)["data"])
+    req = dict(json.loads(re.get(
+        f'https://currate.ru/api/?get=rates&pairs={PAIR_CURRENCY}&key={API_KEY}').text)["data"])
     return req[PAIR_CURRENCY]
-
 # currency list
+
+
 """
+
+
         "BCHEUR",
         "BCHGBP",
         "BCHJPY",
@@ -115,13 +120,12 @@ def get_pair_course():
         "XRPRUB",
         "XRPUSD",
         "ZECUSD"
-"""    
+"""
 
 # def refresh_data():
-#     # заменить на запрос 
+#     # заменить на запрос
 #     with open('req_cur.json', 'w') as outfile:
 #         json.dump(json.loads(get_course.text), outfile, ensure_ascii=False, indent=4)
-
 
 
 # with open("req.json", "r") as file:
@@ -129,7 +133,7 @@ def get_pair_course():
 # staus_code = req_json["status"]
 
 
-# if os.path.exists('req_cur.json')==0:  
+# if os.path.exists('req_cur.json')==0:
 #     with open('req_cur.json', 'w') as outfile:
 #         json.dump(json.loads(get.text), outfile, ensure_ascii=False, indent=4)
 
