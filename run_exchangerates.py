@@ -25,3 +25,18 @@ def exchange(cur, amount):
         req_json = json.loads(f.read())
         result = float(req_json["rates"][cur])
     return f"{amount} EUR = "+str(result) + f" {cur}"
+
+# реализация на замыканиях
+def currency(currency):
+    def among(amount):
+        nonlocal currency
+        cur = currency
+        with open("exchange-money-python/exchangerates_req.json", "r") as f:
+            req_json = json.loads(f.read())
+        return float(req_json["rates"][cur])
+    return among
+
+
+get_cuttency = currency("RUB")
+print(currency("USD")(2))
+print(get_cuttency(5))
