@@ -18,7 +18,6 @@ def exchange(cur, amount):
 # реализация на замыканиях
 def currency(currency):
     def among(amount):
-        nonlocal currency
         cur = currency
         with open("ФАЙЛ.JSON ИЩИ В ПРОЕКТЕ", "r") as f:
             req_json = ДЖЭСОН.МЕТОД ЗАГРУЗКИ(f.прочитать)
