@@ -1,7 +1,7 @@
 from run_exchangerates import exchange
 
 
-if запуск в точке входа:
-    cur = ввод"Input the curreny: в верхний регист    
-    amount = ввод"Input amount: "
-    print(функция которую импортировали(Я Ф СТРОКА"{cur}", Я Ф СТРОКА"{amount}"))
+if if __name__ == "__main__":
+    cur = str(input("Input the curreny:".upper()))    
+    amount = input("Input amount: ")
+    print(exchange(f"{cur}", f"{amount}"))
